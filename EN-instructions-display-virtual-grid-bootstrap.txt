@@ -1,0 +1,60 @@
+Library Name : Display Virtual Grid Bootstrap 
+Version      : 2.2.3
+By           : Rémi Gasnier
+Creation Date: 2023-02-08
+Last Changes : 2023-02-18
+
+INSTRUCTIONS:
+
+1) Only use this tool to check your structure visually
+during code design with Bootstrap 5 and above.
+Preferably before putting content in it (images, texts, etc.).
+However it is possible to use it with embedded content.
+In this case, this will inevitably have an impact on the rendering since the CSS acts directly on the classes:
+     .container, container-*, container-fluid, .row, .col, col-* and .col-*-*.
+
+2) Place "display-virtual-grid-bootstrap.css" in your project's CSS folder.
+
+3) Put the "display-virtual-grid-bootstrap.js" file in the JS folder of your project.
+
+4) The following 3 lines of code are to be integrated into the <head> of the desired HTML page,
+always after bootstrap's css call, but before your own style.css:
+
+<!-- CSS and JS display-virtual-grid-bootstrap -->
+<link rel="stylesheet" href="your-url/display-virtual-grid-bootstrap.css">
+<script defer src="your-url/display-virtual-grid-bootstrap.js"></script>
+
+Note: Replace "your-url" with your own project tree path.
+
+5) It is imperative to respect the two basic structures of bootstrap so that the library
+display-virtual-grid-bootstrap works correctly:
+
+section[header|footer|article|div|other]
+    div.container
+        div.row
+            div[article|autre].col|.col-*|.col-*-*]
+                div[article|autre][.card|.myclass|.other]
+
+OR
+
+section[header|footer|article|div|other]
+    div.container-fluid
+        div.row
+            div[article|autre].col|.col-*|.col-*-*]
+                div[article|autre][.card|.myclass|.other]
+
+6) Once integrated, a "GRID ON" button will be created automatically at the top left of the page.
+By default the bootstrap virtual grid visualization system is enabled.
+If you want to disable it temporarily, just click on the button.
+Do the same to reactivate visualization.
+
+NOTE: A cookie will be created. It allows to keep the active or not active state of the visualization of the grid
+even after a page refresh.
+
+WARNING: The creation of the cookie only works if you go through a server (local or online).
+For example Lamp, Mamp, Wamp, Xampp or Live Server from VSCode are perfectly suitable.
+
+7) Remember to delete the lines of code integrated in the <head> and to remove the files
+of your project once you no longer need the library.
+
+Have fun !

@@ -1,0 +1,60 @@
+Nom de la bibliothèque : Display Virtual Grid Bootstrap 
+Version                : 2.2.3
+Par                    : Rémi Gasnier
+Date de création       : 08-02-2023
+Dernière modification  : 18-02-2023
+
+INSTRUCTIONS :
+
+1) N'utiliser cette outil que pour vérifier votre structure visuellement 
+durant la conception du code avec Bootstrap 5 et sup. 
+De préférence avant de mettre du contenu dedans (images, textes, etc.). 
+Cependant il est possible de l'utiliser avec du contenu intégré.
+Dans ce cas cela aura inévitablement un impact sur le rendu puisque le CSS agit directement sur les classes : 
+    .container, container-*, container-fluid, .row, .col, col-* et .col-*-*.
+
+2) Placer "display-virtual-grid-bootstrap.css" dans le dossier CSS de votre projet.
+
+3) Mettre le fichier "display-virtual-grid-bootstrap.js" dans le dossier JS de votre projet.
+
+4) Les 3 lignes de code suivantes sont à intégrer dans le <head> de la page HTML souhaitez, 
+toujours après l'appel du css de bootstrap, mais avant votre propre style.css :
+
+<!-- CSS et JS display-virtual-grid-bootstrap -->
+<link rel="stylesheet" href="your-url/display-virtual-grid-bootstrap.css">
+<script defer src="your-url/display-virtual-grid-bootstrap.js"></script>
+
+Note : Remplacez "your-url" par le chemin d'accès propre à l'arborescence de votre projet.
+
+5) Il est impératif de respecter les deux structures de base de bootstrap pour que la librairie
+Display Virtual Grid Bootstrap fonctionne correctement :
+
+section[header|footer|article|div|autre]
+    div.container
+        div.row
+            div[article|autre].col|.col-*|.col-*-*]
+                div[article|autre][.card|.myclass|.autre]
+
+OU
+
+section[header|footer|article|div|autre]
+    div.container-fluid
+        div.row
+            div[article|autre].col|.col-*|.col-*-*]
+                div[article|autre][.card|.myclass|.autre]
+
+6) Une fois intégré, un bouton "GRID ON" sera créé automatiquement en haut à gauche de la page.
+Par défaut le système de visualisation de la grille virtuelle de bootstrap est activé.
+Si vous souhaitez le désactiver temporairement, il suffit de cliquer sur le bouton.
+Faire de même pour réactiver la visualisation.
+
+NOTE : Un cookie sera créé. Il permet de conserver l'état actif ou non actif de la visualisation de la grille 
+même après un raffrachissement de la page.
+
+ATTENTION : La création du cookie ne fonctionne que si vous passez par un serveur (local ou en ligne). 
+Par exemple Lamp, Mamp, Wamp, Xampp ou Live Server de VSCode sont parfaitement adaptés.
+
+7) Pensez à supprimer les lignes de codes intégrées dans le <head> et à retirer les fichiers 
+de votre projet une fois que vous n'avez plus besoin de la librairie.
+
+Amusez-vous bien !
